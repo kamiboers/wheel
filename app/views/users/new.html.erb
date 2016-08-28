@@ -1,0 +1,7 @@
+<%= form_for @user do |f| %>
+<%= f.text_field  :username, class: 'form-control', autofocus: true, placeholder: 'Enter Username'%>
+<%= f.text_field  :email, class: 'form-control', autofocus: true, placeholder: 'Email'%>
+<%= f.text_field  :password, class: 'form-control', autofocus: true, placeholder: 'Password'%>
+<%= f.text_field  :password_confirmation, class: 'form-control', autofocus: true, placeholder: 'Confirm Password'%>
+  <%= f.submit "Create Account" %>
+<% end %>
