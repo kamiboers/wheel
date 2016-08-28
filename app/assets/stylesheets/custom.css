@@ -1,0 +1,26 @@
+/*.form_field {
+  display: block;
+  width: 150px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  border-style: solid;
+  border-color: grey;
+  align-self: center;
+}
+
+.flash {
+  width: 100%;
+  text-align: center;
+  vertical-align: center;
+  min-height: 20px;
+  padding: 5px 0px;
+}
+
+.warning {
+  background-color: #ffcccc;
+}
+
+.success {
+  background-color: #9fdfbe;
+}*/

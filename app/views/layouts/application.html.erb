@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= render 'shared/flash' if !flash.empty? %> 
     <%= yield %>
   </body>
+  
 </html>
