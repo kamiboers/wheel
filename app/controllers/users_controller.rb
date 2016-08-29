@@ -8,12 +8,17 @@ def create
   @user = User.new(user_params)
   if @user.save
     flash[:success] = "Welcome, #{@user.username}"
+    session[:user_id] = @user.id
     redirect_to dashboard_path
   else
-    formatted_errors = @user.errors.full_messages.uniq.map { |m| m.downcase.capitalize }.join(". ")
-    flash[:warning] =  formatted_errors + ". Please try again."
+    formatted_errors = @user.errors.full_messages.uniq.map { |m| m.downcase.capitalize }.join(" - ")
+    flash[:warning] =  formatted_errors + " - Please try again."
     render :new
   end
+end
+
+def show
+  redirect_to '/' if !current_user
 end
 
 private

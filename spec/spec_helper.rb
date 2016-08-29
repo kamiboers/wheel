@@ -96,4 +96,22 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+def create_user(n=1)
+  (1..n).each do |m|
+    User.create(username: "user #{m}", email: "user#{m}@mail.com", password: "password")
+  end
+  return User.last
+end
+
+def login_user
+  user = create_user
+  # allow(ApplicationController).to receive(:current_user).and_return(user)
+  visit '/login'
+  fill_in 'username', with: user.username
+  fill_in 'password', with: 'password'
+  click_on "Log In"
+  return user
+end
+
 end
