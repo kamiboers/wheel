@@ -19,7 +19,7 @@ RSpec.describe "user login", type: :feature do
 
     expect(current_path).to eq("/dashboard")
     expect(page).to have_content("Welcome, NachoNacho")
-    expect(page).to have_content("Your Chores")
+    expect(page).to have_content("Today's Assignment")
     expect(User.last.username).to eq("NachoNacho")
   end
 
