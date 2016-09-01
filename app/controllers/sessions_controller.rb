@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome, #{current_user.username}"
       redirect_to dashboard_path
     else
-      flash[:warning] = "Authentication Failed. Please try again, or <a href='/newuser'>Sign Up</a> to continue.".html_safe
+      flash[:warning] = "Authentication Failed. Please try again, or <a href='/newuser'>Sign Up</a> for an account.".html_safe
       render :new
     end
   end
